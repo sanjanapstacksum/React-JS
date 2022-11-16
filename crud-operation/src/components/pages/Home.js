@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faTrash,faEdit, faUsersViewfinder, faEye } from '@fortawesome/free-solid-svg-icons'
+import {  faTrash,faEdit, faEye } from '@fortawesome/free-solid-svg-icons'
 
 import axios from "axios";
 const Home = () => {
