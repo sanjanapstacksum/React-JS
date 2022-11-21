@@ -1,0 +1,8 @@
+.navbar-nav{
+    position: right;
+}
+
+.navbar-brand{
+    margin-left: 10px;
+    color: red;
+}
