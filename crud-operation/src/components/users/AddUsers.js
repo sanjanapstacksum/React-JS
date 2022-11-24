@@ -49,7 +49,7 @@ const AddUsers = () => {
         website: !user.website ? "Please Enter website" : "",
       });
       isValid = false;
-      console.log(errors.name);
+     
     }
     if (
       (!validEmail.test(user.email) && user.email !== "") ||

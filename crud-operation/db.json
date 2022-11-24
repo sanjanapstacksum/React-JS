@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "name": "sanjana",
-      "username": "aasss",
-      "email": "sanju@gmail.com",
-      "phone": "8888888888",
-      "website": "https://www.godaddy.com",
-      "id": 1
-    },
-    {
       "name": "Pranav",
       "username": "patel",
       "email": "sanju@gmail.com",
@@ -17,28 +9,20 @@
       "id": 2
     },
     {
-      "name": "parth",
-      "username": "patel",
-      "email": "sanju@gmail.com",
-      "phone": "8888888888",
-      "website": "https://www.godaddy.com",
-      "id": 3
-    },
-    {
-      "name": "sanjana",
-      "username": "patel",
-      "email": "sanju@gmail.com",
-      "phone": "8888888888",
-      "website": "https://www.godaddy.com",
-      "id": 4
-    },
-    {
       "name": "khushi",
       "username": "patel",
       "email": "sanjanap.stacksum@gmail.com",
       "phone": "8888888888",
       "website": "https://www.godaddy.com",
       "id": 5
+    },
+    {
+      "name": "khushi",
+      "username": "patel",
+      "email": "180770107151@socet.edu.in",
+      "phone": "8888888889",
+      "website": "https://www.geeksforgeeks.org",
+      "id": 6
     }
   ]
 }

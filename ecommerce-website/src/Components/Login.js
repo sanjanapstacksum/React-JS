@@ -1,10 +1,48 @@
-import React from "react";
+import { React, useState } from "react";
 import { MDBContainer, MDBCol, MDBRow, MDBInput } from "mdb-react-ui-kit";
 import blueLogo from "../Components/Images/blueLogo.png";
+
 import "./Login.css";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const auth = getAuth();
+  const nevigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        
+        setSuccessMsg("Logged in Successfully :)");
+        localStorage.setItem('user-email', email);
+        setEmail("");
+        setPassword("");
+        setErrorMsg("");
+        setTimeout(() => {
+          setSuccessMsg("");
+          nevigate("/");
+        }, 3000);
+      })
+      .catch((error) => {
+        if (error.message == "Firebase: Error (auth/invalid-email).") {
+          setErrorMsg("Please fill required field");
+        }
+        if (error.message == "Firebase: Error (auth/user-not-found).") {
+          setErrorMsg("Email Not Found");
+        }
+        if (error.message == "Firebase: Error (auth/wrong-password).") {
+          setErrorMsg("Please enter correct password");
+        }
+      });
+  };
   return (
     <MDBContainer fluid className="p-3 my-5 h-custom">
       <MDBRow style={{ display: "flex", justifyContent: "center" }}>
@@ -34,25 +72,44 @@ function Login() {
               <h2>Sign In</h2>
             </p>
           </div>
-          <label className="">Email</label>
+          {successMsg && (
+            <>
+              <div className="succ-msg">{successMsg}</div>
+            </>
+          )}
+          {errorMsg && (
+            <>
+              <div className="error-msg">{errorMsg}</div>
+            </>
+          )}
+          <div className="">Email</div>
           <MDBInput
             wrapperClass="mb-4"
-           
             id="formControlLg"
             type="email"
             size="lg"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
-          <label className="">Password</label>
+
+          <div className="">Password</div>
           <MDBInput
             wrapperClass="mb-4"
-           
             id="formControlLg"
             type="password"
             size="lg"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
 
           <div className="text-center text-md-start mt-4 pt-2">
-            <button type="button" class="btn btn-primary">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onClick={handleSubmit}
+            >
               Sign In
             </button>
             <p className="small fw-bold mt-2 pt-1 mb-2">

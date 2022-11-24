@@ -1,0 +1,31 @@
+.notFound{
+    min-height: 100%;
+    min-width: 900px;
+      
+    /* Set up proportionate scaling */
+    width: 60%;
+    height: auto;
+    margin-left: 240px;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#buttonHome{
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(54, 93, 151);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 5px 10px 8px #888888;
+    
+}

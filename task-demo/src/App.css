@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* > * {
+    font-family: "Poppins", cursive;
+    margin: 0;
+}
+
+:root{
+    --color-dark: #2C3131;
+    --color-light: #F3F3F2;
+}
+
+
+
+
+
+
+
+#profile{
+    /* display: flex; */
+
+    margin-top: 3em;
+}
+
+#profile .flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+#profile .flex .item{
+    display: flex;
+    align-items: center;
+}
+
+#profile .flex img{
+    width: 10%;
+    border-radius: 50%;
+    margin-left:10px
+}
+#profile .flex .number{
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background: rgb(153, 122, 122);
+  border: none;
+  color: rgb(54, 48, 48);
+  text-align: center;
+  font: 20px Arial, sans-serif;
+  justify-content: center;
+
+
+}
+#profile .flex .info{
+   padding: 1em;
+}
+
+.text-dark{
+    color: var(--color-dark);
+}

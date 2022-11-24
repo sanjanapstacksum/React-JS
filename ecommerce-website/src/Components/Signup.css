@@ -1,0 +1,37 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgb(238, 238, 238);
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+  height: 100%;
+  }
+}
+
+.succ-msg{
+    color:white ;
+    background-color: rgb(66, 168, 66);
+    height: 60px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+.error-msg {
+    color: red;
+    background-color: rgb(235, 181, 181);
+    height: 58px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
