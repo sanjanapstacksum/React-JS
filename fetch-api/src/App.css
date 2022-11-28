@@ -1,0 +1,15 @@
+
+#table{
+  
+    height: 50%px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 86px; */
+    margin-left: auto;
+  margin-right: auto;
+
+}
+.pagination{
+  float: right;
+}
