@@ -16,11 +16,16 @@ function Login() {
   const auth = getAuth();
   const nevigate = useNavigate();
 
+//   const res = await auth.createUserWithEmailAndPassword(email, password);
+// const user = res.user;
+
+// once we get user object then update user display name using following method
+// await user.updateProfile({displayName: name})
+
   const handleSubmit = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        
         setSuccessMsg("Logged in Successfully :)");
         localStorage.setItem('user-email', email);
         setEmail("");
